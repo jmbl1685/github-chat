@@ -8,13 +8,13 @@ This is chat sample using Angular 8.2.4 and Firebase (Without Backend).
 
 #### Challenge
 
-- Exchange the logic to a backend (Look at the services)
-- Improve functionality
+- Exchange the logic to your own backend (php, nodejs, python, c#...) or using Firebase Functions (Look at the services).
+- Improve functionality.
 
 ## Getting started
 
-./src/environments/environment.ts
-./src/environments/environment.prod.ts
+- ./src/environments/environment.ts
+- ./src/environments/environment.prod.ts
 
 Change this values to your personal credentials
 
