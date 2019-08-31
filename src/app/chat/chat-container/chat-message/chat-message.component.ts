@@ -23,4 +23,11 @@ export class ChatMessageComponent implements OnInit {
   openImg(url: string) {
     window.open(url);
   }
+
+  formatText(text) {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, url => {
+      return `<a href="${url}" target="_blank">${url}</a>`;
+    });
+  }
 }

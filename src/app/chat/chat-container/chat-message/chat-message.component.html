@@ -21,9 +21,9 @@
       <span>{{ message.user.name }}</span>
 
       <span class="user"> </span>
-      <p class="p-2">
-        {{ message.message }}
-      </p>
+
+      <p class="p-2" [innerHTML]="formatText(message.message)"></p>
+
       <div *ngIf="message.file">
         <video
           class="new-img"

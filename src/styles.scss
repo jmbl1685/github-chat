@@ -33,6 +33,14 @@ p {
   margin: 0;
 }
 
+a {
+  color: #4a5699 !important;
+
+  &:hover {
+    border-bottom: 1px solid #4a5699;
+  }
+}
+
 .spacer {
   flex: 1;
 }
