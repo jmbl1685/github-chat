@@ -13,7 +13,8 @@ This is chat sample using Angular 8.2.4 and Firebase (Without Backend).
 
 ## Getting started
 
-src\app\app.module.ts
+./src/environments/environment.ts
+./src/environments/environment.prod.ts
 
 Change this values to your personal credentials
 

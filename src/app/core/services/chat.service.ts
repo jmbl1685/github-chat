@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { IMessage } from '../models/message';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChatService {
-  chatMessagesCollection = 'chat-messages';
-  chatMembersCollection = 'chat-members';
+  chatMessagesCollection = environment.collectionsName.chatMessagesCollection;
+  chatMembersCollection = environment.collectionsName.chatMemberCollection;
 
   constructor(private db: AngularFireDatabase) {}
 
