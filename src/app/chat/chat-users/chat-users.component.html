@@ -1,0 +1,28 @@
+<div class="users">
+  <div class="users-container">
+    <h4 class="text-center">{{ title }}</h4>
+    <div class="text-center mt-4" *ngIf="loading">
+      <img
+        src="../../../assets/img/octocat-spinner-128.gif"
+        height="32"
+        width="32"
+        alt="loading"
+      />
+      <p>{{ loadingMessage }}</p>
+    </div>
+    <span class="user" *ngFor="let user of users" (click)="gitHubProfile(user)">
+      <img
+        [src]="user.avatar_url"
+        alt="avatar"
+        class="avatar"
+        height="40"
+        width="40"
+      />
+      <span
+        class="status"
+        [ngClass]="{ connected: user.status, disconnected: !user.status }"
+      ></span>
+      <p>{{ user.name }}</p> </span
+    ><br />
+  </div>
+</div>

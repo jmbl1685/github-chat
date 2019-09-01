@@ -1,0 +1,46 @@
+$nav-height: 60px;
+
+.github-btn {
+  background-color: #444444;
+  color: #fff;
+  height: 40px;
+  width: 150px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.toolbar {
+  height: $nav-height;
+  margin: -8px;
+  display: flex;
+  align-items: center;
+  background-color: #24292e;
+  color: white;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo:hover {
+  opacity: 0.8;
+}
+
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 570px) {
+  .title {
+    display: none;
+  }
+}

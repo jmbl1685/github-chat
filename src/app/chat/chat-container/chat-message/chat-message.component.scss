@@ -1,0 +1,171 @@
+.messages-container {
+  border: 1px solid #d1d5da;
+  background-color: #fff;
+  height: 80vh;
+  vertical-align: middle;
+  overflow: auto;
+  border-bottom: none;
+  border-radius: 3px;
+}
+
+.user {
+  padding: 10px 0px 0px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user p {
+  margin-left: 8px;
+}
+
+.upload {
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+.emoji {
+  position: absolute;
+  right: 0;
+  margin-right: 25px;
+  margin-top: 10px;
+}
+
+.emoji-mart {
+  position: absolute;
+  bottom: calc(50% - 330px);
+  right: 60px;
+}
+
+.messages ::-webkit-scrollbar {
+  width: 12px;
+  background: #fff;
+}
+
+.messages ::-webkit-scrollbar-thumb {
+  background: #24292e;
+  border-radius: 5px;
+  border: 3px solid #fff;
+}
+
+.chat-message {
+  padding: 10px;
+  width: 50%;
+  text-align: left;
+}
+
+.grayContainer {
+  background-color: #20e43a48;
+  border: 1px solid #d1d5da;
+}
+
+.otherContainer {
+  background-color: #f6f8fa;
+  border: 1px solid #d1d5da;
+}
+
+.send-message {
+  border: 1px solid #d1d5da;
+  background-color: #fff;
+}
+
+.send-message img {
+  cursor: pointer;
+}
+
+.is-typing {
+  position: absolute;
+  margin-top: -20px;
+  font-size: 10.5px;
+  background: #fff;
+  margin-left: 12px;
+  border: 1px solid #d1d5da;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.message-time {
+  color: #afafaf;
+  font-size: 11.2px;
+}
+
+.new-img {
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.input-message {
+  width: 92%;
+  outline: none;
+  border: 1px solid transparent;
+  padding: 10px;
+}
+
+.user-img {
+  margin-top: -140px;
+  margin-left: -20px;
+  border: 1px solid #d1d5da;
+  background-color: white;
+}
+
+.time-end {
+  text-align: end;
+}
+
+.spinner {
+  margin: 100px auto 0;
+  width: 8px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .align-messages {
+    margin: 0 auto;
+    width: 100%;
+  }
+}

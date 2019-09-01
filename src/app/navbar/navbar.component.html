@@ -1,0 +1,25 @@
+<div class="toolbar nav-fixed" role="banner">
+  <img src="../../assets/img/github.svg" />
+  <span class="ml-1 title">{{ title }}</span>
+
+  <div class="spacer"></div>
+
+  <button *ngIf="!status" class="github-btn mt-2 mr-3" (click)="githubLogin()">
+    {{ buttonTitle }}
+  </button>
+
+  <div *ngIf="status" class="toolbar mr-3">
+    <span class="title">{{ user.name }}</span>
+
+    <img [src]="user.avatar_url" alt="avatar_url" class="avatar" />
+
+    <img
+      src="../../assets/img/exit.svg"
+      height="40"
+      width="40"
+      class="cursor-pointer"
+      (click)="logout()"
+    />
+  </div>
+</div>
+<br /><br />

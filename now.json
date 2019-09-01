@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "name": "github-chat",
+  "alias": "github-chat.now.sh",
+  "routes": [
+    {
+      "src": "/(assets/.+|.+\\.gif|.+\\.png|.+\\.jpg|.+\\.svg|.+\\.css|.+\\.js|.+\\.eot|.+\\.ttf|.+\\.woff|.+\\.woff2|.+\\.map)",
+      "headers": {
+        "cache-control": "max-age=31536000,immutable"
+      },
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*).html",
+      "headers": {
+        "cache-control": "public,max-age=0,must-revalidate"
+      },
+      "dest": "/$1.html"
+    },
+    {
+      "src": "/(.*).json",
+      "headers": {
+        "cache-control": "public,max-age=0,must-revalidate"
+      },
+      "dest": "/$1.json"
+    },
+    {
+      "src": "/(.*)",
+      "headers": {
+        "cache-control": "public,max-age=0,must-revalidate"
+      },
+      "dest": "/index.html"
+    }
+  ]
+}

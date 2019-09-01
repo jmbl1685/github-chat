@@ -1,0 +1,81 @@
+<div class="messages">
+  <div
+    class="messages-container p-4"
+    #chatContainer
+    [scrollTop]="scrolltop"
+    (scroll)="scrollHandler($event)"
+  >
+    <div class="text-center mt-1" *ngIf="loading">
+      <img
+        src="../../../assets/img/octocat-spinner-128.gif"
+        height="32"
+        width="32"
+        alt="loading"
+      />
+      <p>{{ loadingMessage }}</p>
+    </div>
+
+    <p *ngIf="messages?.length <= 0 && !loading">
+      {{ messageIndicatorMessage }}
+    </p>
+
+    <div>
+      <app-chat-message [messages]="messages"></app-chat-message>
+    </div>
+  </div>
+</div>
+<div class="send-message">
+  <emoji-mart
+    class="emoji-mart"
+    set="emojione"
+    (emojiSelect)="addEmoji($event)"
+    *ngIf="showEmojiPicker"
+    title="Pick your emoji…"
+  ></emoji-mart>
+
+  <app-loading
+    [show]="userTyping && userTyping.id !== user.id"
+    [boldMessage]="userTyping?.name"
+    [message]="' is typing...'"
+  ></app-loading>
+
+  <app-loading
+    [show]="uploadFileStatus"
+    [message]="uploadFileMessage"
+  ></app-loading>
+
+  <input
+    class="hidden"
+    type="file"
+    (change)="onFileChange($event)"
+    #inputFile
+  />
+
+  <img
+    src="../../../assets/img/upload.svg"
+    alt="upload"
+    height="30"
+    width="30"
+    class="upload"
+    (click)="clickInputFile()"
+  />
+
+  <input
+    class="input-message"
+    type="text"
+    placeholder="Write a message..."
+    [formControl]="message"
+    (keyup.enter)="createMessage($event)"
+    (keydown)="typing($event)"
+    (blur)="resetTyping($event)"
+  />
+
+  <img
+    src="../../../assets/img/smile.svg"
+    alt="smile"
+    height="25"
+    width="25"
+    class="emoji"
+    (click)="toggleEmojiPicker()"
+  />
+</div>

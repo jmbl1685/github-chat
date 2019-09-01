@@ -1,0 +1,55 @@
+// Colors
+$user-connected: #1ed760;
+$user-disconnected: #f44336;
+
+.users-container {
+  border: 1px solid #d1d5da;
+  background-color: #fff;
+  height: 85.5vh;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+.users ::-webkit-scrollbar {
+  width: 12px;
+  background: #fff;
+}
+
+.users ::-webkit-scrollbar-thumb {
+  background: #24292e;
+  border-radius: 5px;
+  border: 3px solid #fff;
+}
+
+.user {
+  padding: 10px 0px 0px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user p {
+  margin-left: 8px;
+}
+
+.status {
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  margin-left: -10px;
+  margin-top: 30px;
+}
+
+.connected {
+  background-color: $user-connected;
+  border: 2px solid #fff;
+  height: 12px;
+  width: 12px;
+}
+
+.disconnected {
+  background-color: $user-disconnected;
+  border: 2px solid #fff;
+  height: 12px;
+  width: 12px;
+}

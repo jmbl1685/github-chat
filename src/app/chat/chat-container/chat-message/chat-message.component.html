@@ -1,0 +1,71 @@
+<div *ngIf="messages.length > 0">
+  <div
+    align="{{ message.user?.id === this.user?.id ? 'right' : 'left' }}"
+    *ngFor="let message of messages"
+  >
+    <div
+      class="chat-message mt-4 align-messages"
+      [ngClass]="{
+        grayContainer: message.user?.id === this.user?.id,
+        otherContainer: message.user?.id !== this.user?.id
+      }"
+    >
+      <img
+        [src]="message.user.avatar"
+        alt="avatar"
+        class="avatar user-img"
+        height="40"
+        width="40"
+      />
+
+      <span>{{ message.user.name }}</span>
+
+      <span class="user"> </span>
+      <p class="p-2">
+        {{ message.message }}
+      </p>
+      <div *ngIf="message.file">
+        <video
+          class="new-img"
+          width="320"
+          height="240"
+          controls
+          *ngIf="message.file.type.includes('video/')"
+        >
+          <source
+            src="{{ message.file?.url }}"
+            type="{{ message.file?.type }}"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        <img
+          *ngIf="message.file.type.includes('image/')"
+          [src]="message.file.url"
+          alt="img"
+          class="new-img cursor-pointer"
+          (click)="openImg(message.file?.url)"
+        />
+        <b
+          ><a
+            *ngIf="
+              !message.file?.type.includes('image/') &&
+              !message.file?.type.includes('video/')
+            "
+            class="cursor-pointer"
+            href="{{ message.file?.url }}"
+            target="_blank"
+          >
+            📦 {{ message.file?.fileName }}</a
+          ></b
+        >
+      </div>
+
+      <div class="time-end">
+        <span class="message-time">{{
+          message.createdAt | date: "medium"
+        }}</span>
+      </div>
+    </div>
+  </div>
+</div>
