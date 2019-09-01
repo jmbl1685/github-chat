@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   status: boolean;
   title: string;
   buttonTitle: string;
+  perks: any[];
 
   constructor(
     private userService: UserService,
@@ -24,6 +25,7 @@ export class NavbarComponent implements OnInit {
     this.title = 'Chat for GitHub Developers';
     this.buttonTitle = 'Sign In With GitHub';
     this.checkUser();
+    this.fillPerks();
   }
 
   ngOnInit(): void {
@@ -88,5 +90,27 @@ export class NavbarComponent implements OnInit {
         reject(err);
       }
     });
+  }
+
+  fillPerks() {
+    this.perks = [
+      {
+        img: '../assets/img/shared.svg',
+        title: 'Shared Files',
+        description:
+          ' Send all kinds of files in order to share knowledge, pdf, images,videos, tutorial, etc.'
+      },
+      {
+        img: '../assets/img/doubt.svg',
+        title: 'Solve doubts in real time',
+        description:
+          'The chat allows you to share new repositories, and answer questions and comment on code from other developers.'
+      },
+      {
+        img: '../assets/img/world.svg',
+        title: 'Contact different developers',
+        description: 'Meet and contact different developers around the world.'
+      }
+    ];
   }
 }

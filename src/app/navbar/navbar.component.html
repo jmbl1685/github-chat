@@ -23,3 +23,22 @@
   </div>
 </div>
 <br /><br />
+
+<div class="container" *ngIf="!status">
+  <div class="row">
+    <div class="col-12 mt-5 text-center">
+      <h1>Chat for GitHub Developers?</h1>
+
+      <div class="row mt-5">
+        <div class="col-lg-4 mt-3" *ngFor="let perk of perks">
+          <img [src]="perk.img" alt="img" height="150" width="150" />
+          <h2>{{ perk.title }}</h2>
+          <p>
+            {{ perk.description }}
+          </p>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+</div>
