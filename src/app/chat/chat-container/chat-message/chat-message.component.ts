@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IMessage } from 'src/app/core/models/message';
 import { IUser } from 'src/app/core/models/user';
+import { EventService } from 'src/app/core/services/event.service';
 
 @Component({
   selector: 'app-chat-message',
@@ -10,6 +11,8 @@ import { IUser } from 'src/app/core/models/user';
 export class ChatMessageComponent implements OnInit {
   user: IUser;
   @Input() messages: Array<IMessage>;
+
+  constructor(private eventService: EventService) {}
 
   ngOnInit() {
     this.checkUser();
@@ -21,7 +24,7 @@ export class ChatMessageComponent implements OnInit {
   }
 
   openImg(url: string) {
-    window.open(url);
+    this.eventService.emit('OPEN_IMAGE_MODAL', { imgUrl: url });
   }
 
   formatText(text) {

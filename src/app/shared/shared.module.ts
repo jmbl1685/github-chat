@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PickerModule } from '@ctrl/ngx-emoji-mart';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoadingComponent } from './loading/loading.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   imports: [
@@ -16,10 +17,11 @@ import { LoadingComponent } from './loading/loading.component';
     RouterModule,
     PickerModule
   ],
-  declarations: [LoadingComponent],
+  declarations: [LoadingComponent, ModalComponent],
   entryComponents: [],
   exports: [
     LoadingComponent,
+    ModalComponent,
     FormsModule,
     ReactiveFormsModule,
     CommonModule,

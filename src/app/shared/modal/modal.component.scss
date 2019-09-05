@@ -1,0 +1,19 @@
+.img-responsive-modal {
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.829);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
