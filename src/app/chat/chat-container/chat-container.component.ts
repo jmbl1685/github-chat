@@ -173,7 +173,7 @@ export class ChatContainerComponent implements OnInit, OnDestroy {
 
       const user = {
         id: this.user.id,
-        name: this.user.name,
+        name: this.usernameHandler(),
         avatar: this.user.avatar_url
       };
 
@@ -229,7 +229,7 @@ export class ChatContainerComponent implements OnInit, OnDestroy {
 
       const user = {
         id: this.user.id,
-        name: this.user.name,
+        name: this.usernameHandler(),
         avatar: this.user.avatar_url
       };
 
@@ -282,5 +282,9 @@ export class ChatContainerComponent implements OnInit, OnDestroy {
         const user: IUser = res.payload.val();
         this.userTyping = user.typing ? user : null;
       });
+  }
+
+  usernameHandler(): string {
+    return this.user.name ? this.user.name : this.user.login;
   }
 }

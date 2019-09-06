@@ -22,7 +22,7 @@
         class="status"
         [ngClass]="{ connected: user.status, disconnected: !user.status }"
       ></span>
-      <p>{{ user.name }}</p> </span
+      <p>{{ user.name ? user.name : user.login }}</p> </span
     ><br />
   </div>
 </div>
