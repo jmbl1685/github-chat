@@ -4,7 +4,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
 
-This is chat sample using Angular 8.2.4 and Firebase (Without Backend).
+This is chat sample using Angular 8.2.6 and Firebase (Without Backend).
 
 #### Challenge
 
