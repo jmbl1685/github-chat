@@ -23,16 +23,17 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/assets/manifest.json"
+            ],
             "styles": [
               "src/styles.scss",
               "src/assets/css/grid.min.css",
               "node_modules/@ctrl/ngx-emoji-mart/picker.css"
             ],
-            "scripts": [
-              "src/assets/manifest.json",
-              "src/firebase-messaging-sw.js"
-            ]
+            "scripts": ["src/firebase-messaging-sw.js"]
           },
           "configurations": {
             "production": {
