@@ -2,9 +2,9 @@
 
 [![Github Chat Logo](https://i.ibb.co/3WwBRxk/logo.png)](https://github-chat.now.sh)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14
 
-This is chat sample using Angular 8.2.6 and Firebase (Without Backend).
+This is chat sample using Angular 8.2.12 and Firebase.
 
 #### Challenge
 

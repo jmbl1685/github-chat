@@ -29,7 +29,10 @@
               "src/assets/css/grid.min.css",
               "node_modules/@ctrl/ngx-emoji-mart/picker.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/manifest.json",
+              "src/firebase-messaging-sw.js"
+            ]
           },
           "configurations": {
             "production": {
