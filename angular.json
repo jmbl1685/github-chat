@@ -17,12 +17,19 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "firebase",
+              "@firebase/app",
+              "firebase/app",
+              "@firebase/auth",
+              "@firebase/database"
+            ],
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -33,7 +40,7 @@
               "src/assets/css/grid.min.css",
               "node_modules/@ctrl/ngx-emoji-mart/picker.css"
             ],
-            "scripts": ["src/firebase-messaging-sw.js"]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -48,7 +55,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": false,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": false,

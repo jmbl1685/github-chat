@@ -2,9 +2,9 @@
 
 [![Github Chat Logo](https://i.ibb.co/3WwBRxk/logo.png)](https://github-chat.now.sh)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7
 
-This is chat sample using Angular 8.2.12 and Firebase.
+This is chat sample using Angular 10.1.6 and Firebase.
 
 #### Challenge
 
@@ -26,7 +26,7 @@ const firebaseConfig = {
   projectId: "{{PASTE_YOUR_PROJECT_ID}}",
   storageBucket: "{{PASTE_YOUR_STORAGE_BUCKET}}",
   messagingSenderId: "{{PASTE_YOUR_MESSAGING_SENDER_ID}}",
-  appId: "{{PASTE_YOUR_APP_ID}}"
+  appId: "{{PASTE_YOUR_APP_ID}}",
 };
 ```
 
