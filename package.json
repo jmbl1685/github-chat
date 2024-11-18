@@ -27,7 +27,7 @@
     "@angular/platform-browser-dynamic": "^10.1.6",
     "@angular/router": "^10.1.6",
     "@ctrl/ngx-emoji-mart": "0.14.0",
-    "firebase": "6.4.2",
+    "firebase": "10.9.0",
     "rxjs": "6.6.3",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
